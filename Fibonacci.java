@@ -1,6 +1,7 @@
 
-/*    This program output the elements of the Fibonacci sequence,
-      until the number, which user inputs.
+/*
+    This program output the elements of the Fibonacci sequence,
+    until the number, which user inputs.
 */
 
 import java.util.Scanner;
@@ -24,4 +25,4 @@ public class Fibonacci {
                 }
             }
         }
-    // Created by Aleksandr Kudinov on 15.9.19
+    // Created by Alexandr Kudinov on 15.9.19

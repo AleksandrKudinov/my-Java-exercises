@@ -1,5 +1,6 @@
 
-/*    This program output the multiplication of two matrix, which user inputs.
+/*
+   This program output the multiplication of two matrix, which user inputs.
  */
 
 import java.util.Scanner;
@@ -7,12 +8,12 @@ import java.util.Scanner;
 public class MatrixMultiplication {
     public static void main(String[] args) {
 
-        Scanner  rowsnumber = new Scanner(System.in);
-        Scanner  coloumsnumber = new Scanner(System.in);
+        Scanner  rowsNumber = new Scanner(System.in);
+        Scanner  coloumsNumber = new Scanner(System.in);
         Scanner ij = new Scanner(System.in);
 
-        //"Matrix" class with "elements" method for entering the elements of the matrices
-        class  Matrix {
+
+        class  Matrix {     //enter the elements of the matrices
         int n;
         int m;
         int[][] matrix = new int[n][m];
@@ -27,31 +28,32 @@ public class MatrixMultiplication {
           }
         }
 
-        //Entering dimensions of matrices with checking for compliance
+        //enter dimensions of matrices with checking for compliance
         Matrix MatrixA = new Matrix();
         Matrix MatrixB = new Matrix();
         do {
             System.out.println("Enter the number of rows of the matrix A (greater than 0): ");
-            MatrixA.n = rowsnumber.nextInt();
+            MatrixA.n = rowsNumber.nextInt();
             System.out.println("Enter the number of columns of the matrix A (greater than 0): ");
-            MatrixA.m = coloumsnumber.nextInt();
+            MatrixA.m = coloumsNumber.nextInt();
             System.out.println("Enter the number of columns of the matrix B (greater than 0): ");
-            MatrixB.m = coloumsnumber.nextInt();
+            MatrixB.m = coloumsNumber.nextInt();
             if (MatrixA.n==0 || MatrixA.m==0 || MatrixB.m==0 ){
                 System.out.println("!The dimension of the matrix must be nonzero!");
             }
         }while(MatrixA.n==0 || MatrixA.m==0 || MatrixB.m==0 );
-        //Entering the elements of the first matrix
+
+        //enter the elements of the first matrix
         System.out.println("Enter the elements of the matrix A");
         MatrixA.matrix = new int [MatrixA.n][MatrixA.m];
         MatrixA.elements();
 
-        //Entering the elements of the second matrix
+        //enter the elements of the second matrix
         System.out.println("Enter the elements of the matrix B");
         MatrixB.matrix = new int [MatrixA.m][MatrixB.m];
         MatrixB.elements();
 
-        //The sum of multiplication of the corresponding elements with the output of the result
+        //the sum of multiplication of the corresponding elements with the output of the result
         System.out.println();
         System.out.println("Matrix С = А*В: ");
         System.out.println();
@@ -71,6 +73,6 @@ public class MatrixMultiplication {
 }
 
 
-// Created by Aleksandr Kudinov on 21.9.19
+// Created by Alexandr Kudinov on 21.9.19
 
 
